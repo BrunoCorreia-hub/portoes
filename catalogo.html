@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Produtos - JK Portões</title>
+    <!-- FontAwesome para os Ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container header-content">
+            <a href="#" class="logo">
+                <i class="fa-solid fa-torii-gate"></i> JK PORTÕES
+            </a>
+            
+            <button class="cart-btn" id="cart-btn">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span>Carrinho</span>
+                <span class="cart-count" id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Banner principal -->
+    <section class="hero-catalogo">
+        <div class="container">
+            <h1 class="hero-title">Catálogo de <span class="highlight">Peças & Motores</span></h1>
+            <p class="hero-subtitle">Selecione os produtos desejados e envie seu pedido diretamente pelo WhatsApp.</p>
+        </div>
+    
+
+    <!-- Catálogo de Produtos -->
+    <main class="container catalog-section">
+        <h2 class="section-title">Nossos Produtos</h2>
+        <div class="products-grid" id="products-grid">
+            <!-- Produtos renderizados via JavaScript -->
+        </div>
+    </main>
+    </section>
+
+    <!-- Modal do Carrinho de Compras -->
+    <div class="cart-modal-overlay" id="cart-modal">
+        <div class="cart-modal">
+            <div class="cart-header">
+                <h3>Seu Carrinho</h3>
+                <button class="close-btn" id="close-cart">&times;</button>
+            </div>
+            
+            <div class="cart-items" id="cart-items">
+                <!-- Itens adicionados aparecem aqui -->
+            </div>
+
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <strong id="cart-total-price">R$ 0,00</strong>
+                </div>
+                <button class="btn btn-primary btn-checkout" id="checkout-btn">
+                    <i class="fa-brands fa-whatsapp"></i> Finalizar no WhatsApp
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
