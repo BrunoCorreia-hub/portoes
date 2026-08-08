@@ -1276,7 +1276,8 @@ body {
 
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
+    justify-content: center;
     gap: 25px;
 }
 
@@ -1284,7 +1285,6 @@ body {
     background: var(--dark-card-color);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -1304,8 +1304,19 @@ body {
     margin-bottom: 15px;
 }
 
+.produto-icone-img{
+    height: 300px;
+    width: 300px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
 .product-title { font-size: 1.2rem; margin-bottom: 8px; }
 .product-desc { color: var(--gray-color); font-size: 0.9rem; margin-bottom: 15px; }
+
+.product-info {
+    padding: 20px;
+}
 
 .product-price {
     font-size: 1.3rem;
@@ -1426,3 +1437,166 @@ body {
 }
 
 .btn-checkout:hover { opacity: 0.9; }
+
+/* ==========================================================
+   RESPONSIVIDADE
+   ========================================================== */
+ 
+/* Telas grandes / notebooks (até 1200px) */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+ 
+    .products-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+    }
+ 
+    .produto-icone-img {
+        height: 220px;
+        width: 100%;
+    }
+}
+ 
+/* Tablets paisagem (até 992px) */
+@media (max-width: 992px) {
+    .container {
+        max-width: 720px;
+    }
+ 
+    .hero-title {
+        font-size: 2.1rem;
+    }
+ 
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px;
+    }
+ 
+    .produto-icone-img {
+        height: 180px;
+    }
+ 
+    .cart-modal {
+        max-width: 350px;
+    }
+}
+ 
+/* Tablets retrato / celulares grandes (até 768px) */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+ 
+    .header-content {
+        padding: 12px 16px;
+    }
+ 
+    .logo {
+        font-size: 1.25rem;
+    }
+ 
+    .cart-btn {
+        padding: 8px 14px;
+        font-size: 0.9rem;
+    }
+ 
+    .hero-catalogo {
+        padding: 100px 0 30px;
+    }
+ 
+    .hero-title {
+        font-size: 1.8rem;
+    }
+ 
+    .hero-subtitle {
+        font-size: 0.95rem;
+        padding: 0 15px;
+    }
+ 
+    .catalog-section {
+        padding: 30px 16px;
+    }
+ 
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+ 
+    
+ 
+    .produto-icone-img {
+        height: 160px;
+        width: 100%;
+    }
+ 
+    .product-title {
+        font-size: 1.05rem;
+    }
+ 
+    .product-desc {
+        font-size: 0.85rem;
+    }
+ 
+    .product-price {
+        font-size: 1.15rem;
+    }
+ 
+    .cart-modal {
+        max-width: 100%;
+    }
+}
+ 
+/* Celulares pequenos (até 575px) */
+@media (max-width: 575px) {
+    .header-content {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+ 
+    .hero-title {
+        font-size: 1.5rem;
+    }
+ 
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+ 
+    .section-title {
+        font-size: 1.1rem;
+    }
+ 
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+ 
+    .produto-icone-img {
+        height: 200px;
+        width: 100%;
+        object-fit: contain;
+    }
+ 
+    .product-icon {
+        font-size: 2.2rem;
+    }
+ 
+    .btn-add-cart {
+        font-size: 0.9rem;
+        padding: 9px;
+    }
+ 
+    .cart-modal {
+        padding: 18px;
+    }
+ 
+    .cart-total {
+        font-size: 1.05rem;
+    }
+ 
+    .btn-checkout {
+        font-size: 0.95rem;
+    }
+}

@@ -307,14 +307,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- CONFIGURAÇÃO ---
     const NUMERO_WHATSAPP = "5561999999999";
 
-    const produtos = [
+    /* const produtos = [
         { id: 1, nome: "Motor de Portão Deslizante", descricao: "Motor rápido de alta durabilidade para portões residenciais.", preco: 450.00, icone: "fa-microchip" },
         { id: 2, nome: "Central de Comando Inteligente", descricao: "Placa eletrônica com freio e parada suave configurável.", preco: 120.00, icone: "fa-memory" },
         { id: 3, nome: "Controle Remoto 433MHz", descricao: "Controle com alça de fixação e 3 canais independentes.", preco: 35.00, icone: "fa-walkie-talkie" },
         { id: 4, nome: "Cremalheira(1 metro)", descricao: "Gomos em náilon industrial ultra resistente com cantoneira em aço.", preco: 45.00, icone: "fa-gears" },
         { id: 5, nome: "Engrenagem de Tração", descricao: "Engrenagem interna/externa em alumínio injetado.", preco: 55.00, icone: "fa-gear" },
         { id: 6, nome: "Capacitor de Partida (15uF a 30uF)", descricao: "Capacitor para motores assíncronos de portão elétrico.", preco: 25.00, icone: "fa-bolt" }
-    ];
+    ]; */
 
     let carrinho = [];
 
@@ -337,11 +337,11 @@ document.addEventListener('DOMContentLoaded', () => {
             productCard.classList.add('product-card');
             productCard.innerHTML = `
                 <div>
-                    <div class="product-icon"><i class="fa-solid ${produto.icone}"></i></div>
+                    <div class="product-icon"><img src="${produto.icone}" class="produto-icone-img"></img></div>           
+                </div>
+                <div class="product-info">
                     <h3 class="product-title">${produto.nome}</h3>
                     <p class="product-desc">${produto.descricao}</p>
-                </div>
-                <div>
                     <div class="product-price">R$ ${produto.preco.toFixed(2).replace('.', ',')}</div>
                     <button class="btn-add-cart" data-id="${produto.id}">
                         <i class="fa-solid fa-plus"></i> Adicionar
